@@ -36,15 +36,17 @@ public class SignUpForm extends com.codename1.ui.Form {
     private com.codename1.ui.Container gui_Container_1 = new com.codename1.ui.Container(new com.codename1.ui.layouts.BoxLayout(com.codename1.ui.layouts.BoxLayout.Y_AXIS));
     private com.codename1.ui.Label gui_Label_1 = new com.codename1.ui.Label();
     private com.codename1.ui.ComponentGroup gui_Component_Group_1 = new com.codename1.ui.ComponentGroup();
-    private com.codename1.ui.TextField gui_Text_Field_2 = new com.codename1.ui.TextField("","Email", 20, TextArea.EMAILADDR);
-    private com.codename1.ui.TextField gui_Text_Field_1 = new com.codename1.ui.TextField("","Password", 20, TextArea.PASSWORD);
-    private com.codename1.ui.TextField gui_Text_Field_3 = new com.codename1.ui.TextField("","Confirm Password", 20, TextArea.PASSWORD);
+    private com.codename1.ui.TextField gui_Text_Field_1 = new com.codename1.ui.TextField("","Nom", 20, TextArea.EMAILADDR);
+    private com.codename1.ui.TextField gui_Text_Field_2 = new com.codename1.ui.TextField("","Prenom", 20, TextArea.EMAILADDR);
+    private com.codename1.ui.TextField gui_Text_Field_3 = new com.codename1.ui.TextField("","Email", 20, TextArea.EMAILADDR);
+    private com.codename1.ui.ComboBox<String> gui_comboBox = new com.codename1.ui.ComboBox<>();
+    private com.codename1.ui.TextField gui_Text_Field_4 = new com.codename1.ui.TextField("","Password", 20, TextArea.PASSWORD);
+    private com.codename1.ui.TextField gui_Text_Field_5 = new com.codename1.ui.TextField("","Confirm Password", 20, TextArea.PASSWORD);
 
     private com.codename1.ui.Button gui_Button_2 = new com.codename1.ui.Button();
     private com.codename1.ui.Button gui_Button_3 = new com.codename1.ui.Button();
     private com.codename1.ui.Button gui_Button_1 = new com.codename1.ui.Button();
-    
-    private com.codename1.ui.ComboBox<String> gui_comboBox = new com.codename1.ui.ComboBox<>();
+
 
 
 // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
@@ -93,13 +95,15 @@ public class SignUpForm extends com.codename1.ui.Form {
         gui_Container_1.addComponent(gui_Label_1);
         gui_Container_1.addComponent(gui_Component_Group_1);
         gui_Component_Group_1.setName("Component_Group_1");
-        gui_Component_Group_1.addComponent(gui_Text_Field_2);
         gui_Component_Group_1.addComponent(gui_Text_Field_1);
+        gui_Component_Group_1.addComponent(gui_Text_Field_2);
         gui_Component_Group_1.addComponent(gui_Text_Field_3);
+        gui_Component_Group_1.addComponent(gui_Text_Field_4);
+        gui_Component_Group_1.addComponent(gui_Text_Field_5);
         gui_Component_Group_1.addComponent(gui_comboBox);
 
-        gui_comboBox.addItem("client");
-        gui_comboBox.addItem("associe");
+        gui_comboBox.addItem("Male");
+        gui_comboBox.addItem("Female");
         //gui_Text_Field_2.setText("TextField");
         //gui_Text_Field_2.setName("Text_Field_2");
         //gui_Text_Field_1.setText("TextField");
