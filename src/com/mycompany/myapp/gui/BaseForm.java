@@ -15,12 +15,16 @@ import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.util.Resources;
+import com.mycompany.myapp.services.CurrentUser;
+import com.mycompany.myapp.services.UserService;
 
 /**
  *
  * @author SBS
  */
 public class BaseForm extends Form {
+UserService US = new UserService();
+CurrentUser CU = new CurrentUser();
     public void installSidemenu(Resources res) {
         Image selection = res.getImage("selection-in-sidemenu.png");
         
@@ -59,8 +63,8 @@ public class BaseForm extends Form {
         // spacer
         getToolbar().addComponentToSideMenu(new Label(" ", "SideCommand"));
         getToolbar().addComponentToSideMenu(new Label(res.getImage("logo.png"), "Container"));
-        getToolbar().addComponentToSideMenu(new Label("Detra Mcmunn", "SideCommandNoPad"));
-        getToolbar().addComponentToSideMenu(new Label("Long Beach, CA", "SideCommandSmall"));
+        getToolbar().addComponentToSideMenu(new Label(CU.getCurrentUser().getPrenom()+" "+CU.getCurrentUser().getNom(), "SideCommandNoPad"));
+        getToolbar().addComponentToSideMenu(new Label(CU.getCurrentUser().getType_user(), "SideCommandSmall"));
     }
 
         

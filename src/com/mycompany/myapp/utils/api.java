@@ -7,7 +7,7 @@ package com.mycompany.myapp.utils;
 
 /**
  *
- * @author SBS
+ * @author MINDUNITS
  */
 public class api {
     public static final String BASE_URL="http://localhost:8000";

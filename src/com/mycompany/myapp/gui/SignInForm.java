@@ -5,9 +5,11 @@
  */
 package com.mycompany.myapp.gui;
 
+import com.codename1.ui.Dialog;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.TextArea;
 import com.mycompany.myapp.gui.*;
+import com.mycompany.myapp.services.CurrentUser;
 import com.mycompany.myapp.services.UserService;
 
 /**
@@ -15,7 +17,8 @@ import com.mycompany.myapp.services.UserService;
  * @author SBS
  */
 public class SignInForm extends com.codename1.ui.Form {
-
+UserService US = new UserService();
+CurrentUser CU = new CurrentUser();
     public SignInForm() {
         this(com.codename1.ui.util.Resources.getGlobalResources());
     }
@@ -119,9 +122,32 @@ public class SignInForm extends com.codename1.ui.Form {
 //-- DON'T EDIT ABOVE THIS LINE!!!
     public void onButton_2ActionEvent(com.codename1.ui.events.ActionEvent ev) {
         System.out.println(gui_Text_Field_2.getText()+" ....... " +gui_Text_Field_1.getText());
-        UserService.getInstance().login(gui_Text_Field_2.getText(), gui_Text_Field_1.getText());
-        new InboxForm().show();
+         if ((gui_Text_Field_2.getText().length() != 0) && (gui_Text_Field_1.getText().length() != 0)) {
+                if (gui_Text_Field_2.getText().length() != 0) {
+                    if (gui_Text_Field_1.getText().length() >= 0) {
+                        boolean check =  US.getInstance().login(gui_Text_Field_2.getText(), gui_Text_Field_1.getText());
+                        if (check) {
+                            CU.setIdCurrentUser(US.getUser(gui_Text_Field_2.getText()).get(0).getID_Utilisateur());
+                            CU.setCurrentUser(US.getUser(gui_Text_Field_2.getText()).get(0));
+                            Dialog.show("Authentifié avec succés ! ", "Bienvenue " + CU.getCurrentUser().getPrenom()+ " "+CU.getCurrentUser().getNom() +"!", "Entrer", null);
+                             new InboxForm().show();
+                        }
+                    } else {
+                        Dialog.show("Alert", "Password is invalid!", "Ok", null);
+                    }
+                } else {
+                    Dialog.show("Alert", "E-mail is invalid!", "Ok", null);
+                }
+            } else {
+                Dialog.show("Alert", "Please fill all the fields", "OK", null);
+            }
+    
+               
+
+       
 
     }
+  
+    
 
 }

@@ -27,7 +27,7 @@ import java.util.List;
 
 /**
  *
- * @author SBS
+ * @author MINDUNITS
  */
 public class InboxForm extends BaseForm {
 
