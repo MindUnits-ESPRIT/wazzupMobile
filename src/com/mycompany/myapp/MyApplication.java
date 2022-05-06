@@ -50,6 +50,7 @@ public class MyApplication {
         }
        // new SplashForm(theme).show();
         new ProfileClientForm(theme).show();
+        //added some changes
     }
 
     public void stop() {
