@@ -48,8 +48,9 @@ public class MyApplication {
             current.show();
             return;
         }
-        new SplashForm(theme).show();
-        //new ProfileClientForm(theme).show();
+       // new SplashForm(theme).show();
+        new ProfileClientForm(theme).show();
+        //added some changes
     }
 
     public void stop() {
