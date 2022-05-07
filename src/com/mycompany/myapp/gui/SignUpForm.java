@@ -9,6 +9,7 @@ import com.codename1.ui.Command;
 import com.codename1.ui.Dialog;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.TextArea;
+import com.codename1.ui.spinner.Picker;
 import com.mycompany.myapp.gui.*;
 import com.mycompany.myapp.services.UserService;
 
@@ -36,12 +37,13 @@ public class SignUpForm extends com.codename1.ui.Form {
     private com.codename1.ui.Container gui_Container_1 = new com.codename1.ui.Container(new com.codename1.ui.layouts.BoxLayout(com.codename1.ui.layouts.BoxLayout.Y_AXIS));
     private com.codename1.ui.Label gui_Label_1 = new com.codename1.ui.Label();
     private com.codename1.ui.ComponentGroup gui_Component_Group_1 = new com.codename1.ui.ComponentGroup();
-    private com.codename1.ui.TextField gui_Text_Field_1 = new com.codename1.ui.TextField("","Nom", 20, TextArea.EMAILADDR);
-    private com.codename1.ui.TextField gui_Text_Field_2 = new com.codename1.ui.TextField("","Prenom", 20, TextArea.EMAILADDR);
+    private com.codename1.ui.TextField gui_Text_Field_1 = new com.codename1.ui.TextField("","Nom", 20, TextArea.ANY);
+    private com.codename1.ui.TextField gui_Text_Field_2 = new com.codename1.ui.TextField("","Prenom", 20, TextArea.ANY);
     private com.codename1.ui.TextField gui_Text_Field_3 = new com.codename1.ui.TextField("","Email", 20, TextArea.EMAILADDR);
+    private com.codename1.ui.TextField gui_Text_Field_4 = new com.codename1.ui.TextField("","Numero Tel", 20, TextArea.ANY);
+    private Picker datePicker = new Picker();  // DATE NAISSANCE
     private com.codename1.ui.ComboBox<String> gui_comboBox = new com.codename1.ui.ComboBox<>();
-    private com.codename1.ui.TextField gui_Text_Field_4 = new com.codename1.ui.TextField("","Password", 20, TextArea.PASSWORD);
-    private com.codename1.ui.TextField gui_Text_Field_5 = new com.codename1.ui.TextField("","Confirm Password", 20, TextArea.PASSWORD);
+    private com.codename1.ui.TextField gui_Text_Field_5 = new com.codename1.ui.TextField("","Password", 20, TextArea.PASSWORD);
 
     private com.codename1.ui.Button gui_Button_2 = new com.codename1.ui.Button();
     private com.codename1.ui.Button gui_Button_3 = new com.codename1.ui.Button();
@@ -101,13 +103,11 @@ public class SignUpForm extends com.codename1.ui.Form {
         gui_Component_Group_1.addComponent(gui_Text_Field_4);
         gui_Component_Group_1.addComponent(gui_Text_Field_5);
         gui_Component_Group_1.addComponent(gui_comboBox);
+         gui_Component_Group_1.addComponent(datePicker);
 
         gui_comboBox.addItem("Male");
         gui_comboBox.addItem("Female");
-        //gui_Text_Field_2.setText("TextField");
-        //gui_Text_Field_2.setName("Text_Field_2");
-        //gui_Text_Field_1.setText("TextField");
-        //gui_Text_Field_1.setName("Text_Field_1");
+
         gui_Container_1.addComponent(gui_Button_2);
         gui_Container_1.addComponent(gui_Button_3);
         gui_Label_1.setUIID("CenterLabel");
@@ -128,11 +128,28 @@ public class SignUpForm extends com.codename1.ui.Form {
     }// </editor-fold>
 
 //-- DON'T EDIT ABOVE THIS LINE!!!
+
+    
     public void onButton_2ActionEvent(com.codename1.ui.events.ActionEvent ev) {
         System.out.println(gui_Text_Field_2.getText()+" ....... " +gui_Text_Field_1.getText()+" ....... " + gui_Text_Field_3.getText()+" ....... " +gui_comboBox.getSelectedItem());
-        UserService.getInstance().addUser(gui_Text_Field_2.getText(), gui_Text_Field_1.getText(), gui_Text_Field_3.getText(),gui_comboBox.getSelectedItem());
+        boolean exists=UserService.getInstance().CheckMailExistance(gui_Text_Field_3.getText());
+        boolean dbvalide=UserService.getInstance().CheckDateofbirthvalidity(datePicker.getText());
+       System.out.println("DB CHECK"+dbvalide);
+        if(exists==false){
+           if (dbvalide==true){
+             boolean added=UserService.getInstance().addUser(gui_Text_Field_1.getText(), gui_Text_Field_2.getText(), gui_Text_Field_3.getText(),gui_Text_Field_5.getText(),gui_comboBox.getSelectedItem(),gui_Text_Field_4.getText(),datePicker.getText());
+            if (added){
+          Dialog.show("Success","Inscription acceptée",new Command("OK"));
+
+           }
+          } else {
+            Dialog.show("Error","Inscription Réfusée , Il faut que vous soyez +18 ans ",new Command("Vérifier"));
+           }
+        } else{
+         Dialog.show("Error","Inscription Réfusée , Votre email existe déja ",new Command("Vérifier"));
+
+        }
         
-        Dialog.show("Success","Connection accepted",new Command("OK"));
     }
 
 }

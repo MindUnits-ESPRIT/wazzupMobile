@@ -43,6 +43,13 @@ CurrentUser CU = new CurrentUser();
         Image profileImage = null;
         if(isCurrentProfile()) profileImage = selection;
         
+        Image Userslist = null;
+        if(isCurrentUserslist()) Userslist = selection;
+        
+        Image Collablist = null;
+        if (isCurrentCollablist()) Collablist = selection;
+        
+        
         Button inboxButton = new Button("Inbox", inboxImage);
         inboxButton.setUIID("SideCommand");
         inboxButton.getAllStyles().setPaddingBottom(0);
@@ -62,8 +69,8 @@ CurrentUser CU = new CurrentUser();
         getToolbar().addCommandToSideMenu("Settings", null, e -> {});
         } 
         else if (CU.getCurrentUser().getType_user().equals("Admin")){
-        getToolbar().addCommandToSideMenu("Liste utilisateurs", profileImage, e -> new ProfileClientForm(res).show());
-        getToolbar().addCommandToSideMenu("Liste collaborations", calendarImage, e -> new CalendarForm(res).show());
+        getToolbar().addCommandToSideMenu("Liste utilisateurs", Userslist, e -> new Userslist(res).show());
+        getToolbar().addCommandToSideMenu("Liste collaborations", Collablist, e -> new CalendarForm(res).show());
         getToolbar().addCommandToSideMenu("Settings", null, e -> {});
         }
         // spacer
@@ -97,4 +104,12 @@ CurrentUser CU = new CurrentUser();
     protected boolean isCurrentStats() {
         return false;
     }
+      protected boolean isCurrentUserslist() {
+        return false;
+    }
+      protected boolean isCurrentCollablist() {
+        return false;
+    }
+      
+    
 }

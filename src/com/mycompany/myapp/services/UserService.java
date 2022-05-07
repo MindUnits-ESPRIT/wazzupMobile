@@ -5,6 +5,8 @@ import com.codename1.io.ConnectionRequest;
 import com.codename1.io.JSONParser;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
+import com.codename1.l10n.DateFormat;
+import com.codename1.l10n.SimpleDateFormat;
 import com.codename1.ui.events.ActionListener;
 import com.mycompany.myapp.entities.User;
 import com.mycompany.myapp.utils.api;
@@ -14,6 +16,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
@@ -27,6 +30,8 @@ public class UserService {
     public static UserService instance=null;
     public boolean resultOK;
     public String res;
+    public boolean exists;
+    public boolean validedb;
     private ConnectionRequest req;
     private Hashtable requestResult;
      private ArrayList<User> user;
@@ -61,8 +66,8 @@ public class UserService {
 //        return resultOK;
 //    }
 //    
-    public boolean addUser(String email,String password, String cpassword, String role) {
-        String url = api.BASE_URL + "/api/users/signup?email=" + email + "&password=" + password + "&confirmpassword=" + cpassword+ "&role=" + role ; //création de l'URL
+    public boolean addUser(String nom,String prenom,String email, String password,String genre,String numtel,String db) {
+        String url = api.BASE_URL + "/api/users/signup?nom=" + nom + "&prenom=" + prenom + "&email=" + email+ "&mdp=" + password+"&genre=" + genre+"&full_number="+numtel+"&datenaissance="+db; //création de l'URL
         req.setUrl(url);// Insertion de l'URL de notre demande de connexion
         req.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
@@ -82,6 +87,37 @@ public class UserService {
 
         return resultOK;
     }
+        public boolean CheckMailExistance(String email) {
+             String url = api.BASE_URL + "/api/users/verifymail?email=" + email; //création de l'URL
+        req.setUrl(url);// Insertion de l'URL de notre demande de connexion
+        req.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+                  resultOK = req.getResponseCode() == 200; //Code HTTP 200 OK
+                    exists = Boolean.parseBoolean(new String(req.getResponseData()));
+            }
+        });
+             NetworkManager.getInstance().addToQueueAndWait(req);
+        System.out.println("MAIL EXISTANCE "+exists);
+
+        return exists;
+        }
+                public boolean CheckDateofbirthvalidity(String db) {
+  
+             String url = api.BASE_URL + "/api/users/verifynaissance?datenaissance=" + db; //création de l'URL
+        req.setUrl(url);// Insertion de l'URL de notre demande de connexion
+        req.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+                  resultOK = req.getResponseCode() == 200; //Code HTTP 200 OK
+                    validedb = Boolean.parseBoolean(new String(req.getResponseData()));
+            }
+        });
+             NetworkManager.getInstance().addToQueueAndWait(req);
+        return validedb;
+        }
+        
+        
     
     public String login(String email,String password) {
         String url = api.BASE_URL + "/api/mobile-auth?email=" + email + "&mdp=" + password; //création de l'URL
@@ -113,28 +149,7 @@ public class UserService {
     }
     
 
-//    public User parseUser(InputStream jsonText){
-//        try {
-//            JSONParser j = new JSONParser();// Instanciation d'un objet JSONParser permettant le parsing du résultat json
-//            this.requestResult = j.parse(new InputStreamReader(jsonText));
-//            System.out.println("GETTING USER");
-//            System.out.println("requestResult"+requestResult);
-//            System.out.println(requestResult.get("user"));
-//            Hashtable user = (Hashtable) requestResult.get("user");
-//            System.out.println("user " + user.get("ID_Utilisateur"));
-//            
-//        } catch (IOException ex) {
-//            System.out.println("exep"+ex);
-//            
-//        }
-//         /*
-//            A ce niveau on a pu récupérer une liste des tâches à partir
-//        de la base de données à travers un service web
-//        
-//        */
-//        return null;
-//    }
-    
+
        //retrieving connected user
     public ArrayList<User> getUser(String email) {
         System.out.println("THIS IS EMAIL "+ email);
