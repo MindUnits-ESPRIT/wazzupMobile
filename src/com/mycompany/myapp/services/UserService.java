@@ -12,10 +12,12 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
+
 
 /**
  *
@@ -24,6 +26,7 @@ import java.util.Map;
 public class UserService {    
     public static UserService instance=null;
     public boolean resultOK;
+    public String res;
     private ConnectionRequest req;
     private Hashtable requestResult;
      private ArrayList<User> user;
@@ -80,27 +83,33 @@ public class UserService {
         return resultOK;
     }
     
-    public boolean login(String email,String password) {
+    public String login(String email,String password) {
         String url = api.BASE_URL + "/api/mobile-auth?email=" + email + "&mdp=" + password; //création de l'URL
         req.setUrl(url);// Insertion de l'URL de notre demande de connexion
         req.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {
-                resultOK = req.getResponseCode() == 200; //Code HTTP 200 OK
-                req.removeResponseListener(this); //Supprimer cet actionListener
-                /* une fois que nous avons terminé de l'utiliser.
-                La ConnectionRequest req est unique pour tous les appels de 
-                n'importe quelle méthode du Service task, donc si on ne supprime
-                pas l'ActionListener il sera enregistré et donc éxécuté même si 
-                la réponse reçue correspond à une autre URL(get par exemple)*/
+              
+            
+                    resultOK = req.getResponseCode() == 200; //Code HTTP 200 OK
+                    res = new String(req.getResponseData());
+                    System.out.println("THIS IS RESULTAT REALL"+res);
+                    req.removeResponseListener(this); //Supprimer cet actionListener
+                    /* une fois que nous avons terminé de l'utiliser.
+                    La ConnectionRequest req est unique pour tous les appels de
+                    n'importe quelle méthode du Service task, donc si on ne supprime
+                    pas l'ActionListener il sera enregistré et donc éxécuté même si
+                    la réponse reçue correspond à une autre URL(get par exemple)*/
+          
+        
             }
         });
-
+ 
         NetworkManager.getInstance().addToQueueAndWait(req);
-        System.out.println((new String(req.getResponseData())));
         System.out.println("USER IS");
 //        System.out.println(getUser(email,password));
-        return resultOK;
+        return res;
+
     }
     
 

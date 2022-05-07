@@ -4,6 +4,24 @@
     <image name="background.jpg"  />
     <image name="bla.jpg"  />
     <image name="bridge.jpg"  />
+    <image name="Button.sel#borderBottom_1.png" type="multi"  />
+    <image name="Button.sel#borderBottom_2.png" type="multi"  />
+    <image name="Button.sel#borderBottomL_1.png" type="multi"  />
+    <image name="Button.sel#borderBottomL_2.png" type="multi"  />
+    <image name="Button.sel#borderBottomR_1.png" type="multi"  />
+    <image name="Button.sel#borderBottomR_2.png" type="multi"  />
+    <image name="Button.sel#borderCenter_1.png" type="multi"  />
+    <image name="Button.sel#borderCenter_2.png" type="multi"  />
+    <image name="Button.sel#borderLeft_1.png" type="multi"  />
+    <image name="Button.sel#borderLeft_2.png" type="multi"  />
+    <image name="Button.sel#borderRight_1.png" type="multi"  />
+    <image name="Button.sel#borderRight_2.png" type="multi"  />
+    <image name="Button.sel#borderTop_1.png" type="multi"  />
+    <image name="Button.sel#borderTop_2.png" type="multi"  />
+    <image name="Button.sel#borderTopL_1.png" type="multi"  />
+    <image name="Button.sel#borderTopL_2.png" type="multi"  />
+    <image name="Button.sel#borderTopR_1.png" type="multi"  />
+    <image name="Button.sel#borderTopR_2.png" type="multi"  />
     <image name="calendar-background.jpg"  />
     <image name="calendar-separator.png" type="multi"  />
     <image name="card.png" type="multi"  />
@@ -11,6 +29,42 @@
     <image name="contact-b.png" type="multi"  />
     <image name="contact-c.png" type="multi"  />
     <image name="dark-rect.png" type="multi"  />
+    <image name="Deconnexionbtn.borderBottom_1.png" type="multi"  />
+    <image name="Deconnexionbtn.borderBottom_2.png" type="multi"  />
+    <image name="Deconnexionbtn.borderBottom_3.png" type="multi"  />
+    <image name="Deconnexionbtn.borderBottom_4.png" type="multi"  />
+    <image name="Deconnexionbtn.borderBottomL_1.png" type="multi"  />
+    <image name="Deconnexionbtn.borderBottomL_2.png" type="multi"  />
+    <image name="Deconnexionbtn.borderBottomL_3.png" type="multi"  />
+    <image name="Deconnexionbtn.borderBottomL_4.png" type="multi"  />
+    <image name="Deconnexionbtn.borderBottomR_1.png" type="multi"  />
+    <image name="Deconnexionbtn.borderBottomR_2.png" type="multi"  />
+    <image name="Deconnexionbtn.borderBottomR_3.png" type="multi"  />
+    <image name="Deconnexionbtn.borderBottomR_4.png" type="multi"  />
+    <image name="Deconnexionbtn.borderCenter_1.png" type="multi"  />
+    <image name="Deconnexionbtn.borderCenter_2.png" type="multi"  />
+    <image name="Deconnexionbtn.borderCenter_3.png" type="multi"  />
+    <image name="Deconnexionbtn.borderCenter_4.png" type="multi"  />
+    <image name="Deconnexionbtn.borderLeft_1.png" type="multi"  />
+    <image name="Deconnexionbtn.borderLeft_2.png" type="multi"  />
+    <image name="Deconnexionbtn.borderLeft_3.png" type="multi"  />
+    <image name="Deconnexionbtn.borderLeft_4.png" type="multi"  />
+    <image name="Deconnexionbtn.borderRight_1.png" type="multi"  />
+    <image name="Deconnexionbtn.borderRight_2.png" type="multi"  />
+    <image name="Deconnexionbtn.borderRight_3.png" type="multi"  />
+    <image name="Deconnexionbtn.borderRight_4.png" type="multi"  />
+    <image name="Deconnexionbtn.borderTop_1.png" type="multi"  />
+    <image name="Deconnexionbtn.borderTop_2.png" type="multi"  />
+    <image name="Deconnexionbtn.borderTop_3.png" type="multi"  />
+    <image name="Deconnexionbtn.borderTop_4.png" type="multi"  />
+    <image name="Deconnexionbtn.borderTopL_1.png" type="multi"  />
+    <image name="Deconnexionbtn.borderTopL_2.png" type="multi"  />
+    <image name="Deconnexionbtn.borderTopL_3.png" type="multi"  />
+    <image name="Deconnexionbtn.borderTopL_4.png" type="multi"  />
+    <image name="Deconnexionbtn.borderTopR_1.png" type="multi"  />
+    <image name="Deconnexionbtn.borderTopR_2.png" type="multi"  />
+    <image name="Deconnexionbtn.borderTopR_3.png" type="multi"  />
+    <image name="Deconnexionbtn.borderTopR_4.png" type="multi"  />
     <image name="griffith.jpg"  />
     <image name="GroupElement.borderBottom_1.png" type="multi"  />
     <image name="GroupElement.borderBottomL_1.png" type="multi"  />
@@ -57,8 +111,8 @@
             <entry key="Calendar.Thursday" value="Thu" />
             <entry key="ok" value="OK" />
             <entry key="Calendar.Saturday" value="Sat" />
-            <entry key="Calendar.Friday" value="Fri" />
             <entry key="select" value="Select" />
+            <entry key="Calendar.Friday" value="Fri" />
             <entry key="edit" value="Edit" />
             <entry key="Calendar.Monday" value="Mon" />
             <entry key="cancel" value="Cancel" />
@@ -71,13 +125,40 @@
     <image name="profile_image.png" type="multi"  />
     <image name="progress.png" type="multi"  />
     <image name="selection-in-sidemenu.png" type="multi"  />
+    <image name="SideCommandSmall.borderBottom_1.png" type="multi"  />
+    <image name="SideCommandSmall.borderBottom_2.png" type="multi"  />
+    <image name="SideCommandSmall.borderBottom_3.png" type="multi"  />
+    <image name="SideCommandSmall.borderBottomL_1.png" type="multi"  />
+    <image name="SideCommandSmall.borderBottomL_2.png" type="multi"  />
+    <image name="SideCommandSmall.borderBottomL_3.png" type="multi"  />
+    <image name="SideCommandSmall.borderBottomR_1.png" type="multi"  />
+    <image name="SideCommandSmall.borderBottomR_2.png" type="multi"  />
+    <image name="SideCommandSmall.borderBottomR_3.png" type="multi"  />
+    <image name="SideCommandSmall.borderCenter_1.png" type="multi"  />
+    <image name="SideCommandSmall.borderCenter_2.png" type="multi"  />
+    <image name="SideCommandSmall.borderCenter_3.png" type="multi"  />
+    <image name="SideCommandSmall.borderLeft_1.png" type="multi"  />
+    <image name="SideCommandSmall.borderLeft_2.png" type="multi"  />
+    <image name="SideCommandSmall.borderLeft_3.png" type="multi"  />
+    <image name="SideCommandSmall.borderRight_1.png" type="multi"  />
+    <image name="SideCommandSmall.borderRight_2.png" type="multi"  />
+    <image name="SideCommandSmall.borderRight_3.png" type="multi"  />
+    <image name="SideCommandSmall.borderTop_1.png" type="multi"  />
+    <image name="SideCommandSmall.borderTop_2.png" type="multi"  />
+    <image name="SideCommandSmall.borderTop_3.png" type="multi"  />
+    <image name="SideCommandSmall.borderTopL_1.png" type="multi"  />
+    <image name="SideCommandSmall.borderTopL_2.png" type="multi"  />
+    <image name="SideCommandSmall.borderTopL_3.png" type="multi"  />
+    <image name="SideCommandSmall.borderTopR_1.png" type="multi"  />
+    <image name="SideCommandSmall.borderTopR_2.png" type="multi"  />
+    <image name="SideCommandSmall.borderTopR_3.png" type="multi"  />
     <image name="sidemenu-background.jpg"  />
     <image name="skate-park.jpg"  />
     <theme name="Theme">
         <val key="@ComponentGroupBool" value="true" />
         <val key="@includeNativeBool" value="true" />
-        <val key="Button.bgImage" value="background.jpg" />
-        <val key="Button.bgType" value="1" />
+        <gradient key="Button.bgGradient" color1="16750899" color2="16763904" posX="0.5" posY="0.5" radius="1.0" />
+        <val key="Button.bgType" value="7" />
         <border key="Button.border" type="empty" />
         <val key="Button.fgColor" value="ffffff" />
         <font key="Button.font" type="ttf" face="0" style="0" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="3.0" />
@@ -208,6 +289,7 @@
         <val key="DarkRect.padUnit" value="2,2,0,2" />
         <val key="DarkRect.padding" value="0,0,5,5" />
         <val key="DarkRect.transparency" value="0" />
+        <border key="Deconnexionbtn.border" type="image" i1="Deconnexionbtn.borderTop_4.png" i2="Deconnexionbtn.borderTopL_4.png" i3="Deconnexionbtn.borderCenter_4.png" />
         <val key="FloatingActionButton.align" value="4" />
         <val key="FloatingActionButton.bgColor" value="eeb295" />
         <gradient key="FloatingActionButton.bgGradient" color1="16766644" color2="13855849" posX="0.5" posY="0.5" radius="1.0" />
@@ -267,21 +349,23 @@
         <val key="GroupElement.padUnit" value="2,2,2,2" />
         <val key="GroupElement.padding" value="3,3,3,3" />
         <val key="GroupElement.transparency" value="0" />
+        <val key="GroupElementFirst.bgColor" value="000000" />
         <border key="GroupElementFirst.border" type="image" i1="GroupElementFirst.borderTop_1.png" i2="GroupElementFirst.borderBottom_1.png" i3="GroupElementFirst.borderLeft_1.png" i4="GroupElementFirst.borderRight_1.png" i5="GroupElementFirst.borderTopL_1.png" i6="GroupElementFirst.borderTopR_1.png" i7="GroupElementFirst.borderBottomL_1.png" i8="GroupElementFirst.borderBottomR_1.png" i9="GroupElementFirst.borderCenter_1.png" />
         <val key="GroupElementFirst.fgColor" value="4d606f" />
         <font key="GroupElementFirst.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.0" />
         <val key="GroupElementFirst.marUnit" value="2,2,2,2" />
-        <val key="GroupElementFirst.margin" value="1,0,1,1" />
+        <val key="GroupElementFirst.margin" value="1.0,0.0,1.0,1.0" />
         <val key="GroupElementFirst.padUnit" value="2,2,2,2" />
-        <val key="GroupElementFirst.padding" value="3,3,3,3" />
+        <val key="GroupElementFirst.padding" value="3.0,3.0,3.0,3.0" />
         <val key="GroupElementFirst.transparency" value="0" />
         <border key="GroupElementLast.border" type="image" i1="GroupElementLast.borderTop_1.png" i2="GroupElementLast.borderBottom_1.png" i3="GroupElementLast.borderLeft_1.png" i4="GroupElementLast.borderRight_1.png" i5="GroupElementLast.borderTopL_1.png" i6="GroupElementLast.borderTopR_1.png" i7="GroupElementLast.borderBottomL_1.png" i8="GroupElementLast.borderBottomR_1.png" i9="GroupElementLast.borderCenter_1.png" />
         <val key="GroupElementLast.fgColor" value="4d606f" />
         <font key="GroupElementLast.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.0" />
         <val key="GroupElementLast.marUnit" value="2,2,2,2" />
-        <val key="GroupElementLast.margin" value="0,1,1,1" />
+        <val key="GroupElementLast.margin" value="0.0,1.0,1.0,1.0" />
         <val key="GroupElementLast.padUnit" value="2,2,2,2" />
-        <val key="GroupElementLast.padding" value="3,3,3,3" />
+        <val key="GroupElementLast.padding" value="3.0,3.0,3.0,3.0" />
+        <val key="GroupElementLast.sel#bgColor" value="ffffff" />
         <val key="GroupElementLast.transparency" value="0" />
         <border key="GroupElementOnly.border" type="image" i1="GroupElementOnly.borderTop_1.png" i2="GroupElementOnly.borderBottom_1.png" i3="GroupElementOnly.borderLeft_1.png" i4="GroupElementOnly.borderRight_1.png" i5="GroupElementOnly.borderTopL_1.png" i6="GroupElementOnly.borderTopR_1.png" i7="GroupElementOnly.borderBottomL_1.png" i8="GroupElementOnly.borderBottomR_1.png" i9="GroupElementOnly.borderCenter_1.png" />
         <val key="GroupElementOnly.fgColor" value="4d606f" />
@@ -434,16 +518,16 @@
         <val key="SideCommandNumber.padUnit" value="0,2,0,2" />
         <val key="SideCommandNumber.padding" value="1,1,3,3" />
         <val key="SideCommandNumber.transparency" value="0" />
-        <border key="SideCommandSmall.border" type="empty" />
+        <val key="SideCommandSmall.bgColor" value="ff6633" />
         <val key="SideCommandSmall.fgColor" value="bdcadb" />
         <font key="SideCommandSmall.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="2.5" />
         <val key="SideCommandSmall.padUnit" value="0,0,2,0" />
-        <val key="SideCommandSmall.padding" value="0,4,0,0" />
+        <val key="SideCommandSmall.padding" value="0.0,4.0,0.0,0.0" />
         <val key="SideCommandSmall.textDecoration" value="0" />
-        <val key="SideNavigationPanel.bgImage" value="sidemenu-background.jpg" />
+        <val key="SideNavigationPanel.bgImage" value="background.jpg" />
         <val key="SideNavigationPanel.bgType" value="33" />
         <val key="SideNavigationPanel.padUnit" value="2,2,0,0" />
-        <val key="SideNavigationPanel.padding" value="16,0,5,0" />
+        <val key="SideNavigationPanel.padding" value="16.0,0.0,5.0,0.0" />
         <val key="SignInForm.bgColor" value="ffffff" />
         <val key="SignInForm.bgImage" value="background.jpg" />
         <val key="SignInForm.bgType" value="1" />
