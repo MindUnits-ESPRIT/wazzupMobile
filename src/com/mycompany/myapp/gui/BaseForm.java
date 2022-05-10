@@ -20,7 +20,7 @@ import com.mycompany.myapp.services.UserService;
 
 /**
  *
- * @author SBS
+ * @author MINDUNITS
  */
 public class BaseForm extends Form {
 UserService US = new UserService();

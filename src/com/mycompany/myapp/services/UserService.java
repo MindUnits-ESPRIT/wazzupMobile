@@ -32,6 +32,7 @@ public class UserService {
     public String res;
     public boolean exists;
     public boolean validedb;
+    public boolean recupere;
     private ConnectionRequest req;
     private Hashtable requestResult;
      private ArrayList<User> user;
@@ -116,6 +117,22 @@ public class UserService {
              NetworkManager.getInstance().addToQueueAndWait(req);
         return validedb;
         }
+                
+                 public boolean RecupererPassword(String email) {
+             String url = api.BASE_URL + "/api/forgotpassword?email=" + email; //création de l'URL
+        req.setUrl(url);// Insertion de l'URL de notre demande de connexion
+        req.addResponseListener(new ActionListener<NetworkEvent>() {
+            @Override
+            public void actionPerformed(NetworkEvent evt) {
+                  resultOK = req.getResponseCode() == 200; //Code HTTP 200 OK
+                  recupere = Boolean.parseBoolean(new String(req.getResponseData()));
+            }
+        });
+             NetworkManager.getInstance().addToQueueAndWait(req);
+        return recupere;
+        }
+                
+                
         
         
     
