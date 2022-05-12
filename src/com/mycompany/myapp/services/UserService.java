@@ -12,6 +12,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import static java.lang.Integer.parseInt;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
@@ -155,8 +156,10 @@ public class UserService {
             System.out.println("users PRENOM"+usersListJson.get("prenom").toString());
             System.out.println("users NUM"+usersListJson.get("full_number").toString());
 
-        
-           
+             
+               
+                int id = (int) Float.parseFloat(usersListJson.get("idUtilisateur").toString());
+               
                 String nom = usersListJson.get("nom").toString();
                 String prenom = usersListJson.get("prenom").toString();
                 String db = usersListJson.get("datenaissance").toString();
@@ -164,7 +167,7 @@ public class UserService {
                 String email = usersListJson.get("email").toString();
                 String typeuser = usersListJson.get("typeUser").toString();
                 String genre = usersListJson.get("genre").toString();
-                user.add(new User(nom, prenom,db,tel,email,typeuser,genre));
+                user.add(new User(id,nom, prenom,db,tel,email,typeuser,genre));
             
         } catch (IOException ex) {
         }

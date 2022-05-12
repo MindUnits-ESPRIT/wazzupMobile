@@ -17,7 +17,9 @@ import com.codename1.ui.FontImage;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.FlowLayout;
+import com.mycompany.myapp.gui.CollabForm;
 import com.mycompany.myapp.gui.ProfileClientForm;
+import com.mycompany.myapp.gui.ProjetForm;
 import com.mycompany.myapp.gui.SignInForm;
 import com.mycompany.myapp.gui.SplashForm;
 
@@ -50,6 +52,7 @@ public class MyApplication {
         }
         new SplashForm(theme).show();
         //new ProfileClientForm(theme).show();
+    
     }
 
     public void stop() {

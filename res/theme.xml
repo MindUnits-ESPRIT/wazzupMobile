@@ -76,8 +76,8 @@
     <theme name="Theme">
         <val key="@ComponentGroupBool" value="true" />
         <val key="@includeNativeBool" value="true" />
-        <val key="Button.bgImage" value="background.jpg" />
-        <val key="Button.bgType" value="1" />
+        <gradient key="Button.bgGradient" color1="13324878" color2="15570254" posX="0.5" posY="0.5" radius="1.0" />
+        <val key="Button.bgType" value="7" />
         <border key="Button.border" type="empty" />
         <val key="Button.fgColor" value="ffffff" />
         <font key="Button.font" type="ttf" face="0" style="0" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="3.0" />
@@ -85,15 +85,15 @@
         <val key="Button.margin" value="1.0,1.0,1.0,1.0" />
         <val key="Button.padUnit" value="2,2,2,2" />
         <val key="Button.padding" value="4.0,4.0,4.0,4.0" />
-        <gradient key="Button.press#bgGradient" color1="13324878" color2="15570254" posX="0.5" posY="0.5" radius="1.0" />
+        <gradient key="Button.press#bgGradient" color1="10231322" color2="15570254" posX="0.5" posY="0.5" radius="1.0" />
         <val key="Button.press#bgType" value="7" />
         <border key="Button.press#border" type="empty" />
         <val key="Button.press#fgColor" value="ffffff" />
         <font key="Button.press#font" type="ttf" face="0" style="0" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="3.0" />
         <val key="Button.press#marUnit" value="2,2,2,2" />
-        <val key="Button.press#margin" value="1,1,1,1" />
+        <val key="Button.press#margin" value="1.0,1.0,1.0,1.0" />
         <val key="Button.press#padUnit" value="2,2,2,2" />
-        <val key="Button.press#padding" value="4,4,4,4" />
+        <val key="Button.press#padding" value="4.0,4.0,4.0,4.0" />
         <gradient key="Button.sel#bgGradient" color1="10085441" color2="15975582" posX="0.5" posY="0.5" radius="1.0" />
         <val key="Button.sel#bgType" value="7" />
         <border key="Button.sel#border" type="empty" />
@@ -539,6 +539,11 @@
         <val key="StatsLabel.padding" value="1,1,1,1" />
         <val key="StatsLabel.transparency" value="0" />
         <val key="StausBar.transparency" value="0" />
+        <val key="Table.bgColor" value="ffffff" />
+        <gradient key="Table.bgGradient" color1="16777215" color2="16777215" posX="0.5" posY="0.5" radius="1.0" />
+        <val key="Table.bgType" value="7" />
+        <val key="Table.fgColor" value="ffffff" />
+        <val key="Table.transparency" value="0" />
         <val key="TinyBoldLabel.fgColor" value="3c4f5e" />
         <font key="TinyBoldLabel.font" type="ttf" face="0" style="0" size="0" name="native:MainBold" family="native:MainBold" sizeSettings="3" actualSize="1.5" />
         <val key="TinyBoldLabel.margin" value="0,0,0,0" />
