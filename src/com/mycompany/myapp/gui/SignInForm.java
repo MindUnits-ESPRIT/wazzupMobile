@@ -78,7 +78,7 @@ CurrentUser CU = new CurrentUser();
             }
             
             if(sourceComponent == gui_Button_3) {
-                System.out.println("forget pass");
+                new ForgotpasswordForm().show();
             }
         }
 
@@ -122,15 +122,27 @@ CurrentUser CU = new CurrentUser();
 //-- DON'T EDIT ABOVE THIS LINE!!!
     public void onButton_2ActionEvent(com.codename1.ui.events.ActionEvent ev) {
         System.out.println(gui_Text_Field_2.getText()+" ....... " +gui_Text_Field_1.getText());
-         if ((gui_Text_Field_2.getText().length() != 0) && (gui_Text_Field_1.getText().length() != 0)) {
+         
                 if (gui_Text_Field_2.getText().length() != 0) {
-                    if (gui_Text_Field_1.getText().length() >= 0) {
-                        boolean check =  US.getInstance().login(gui_Text_Field_2.getText(), gui_Text_Field_1.getText());
-                        if (check) {
+                    if (gui_Text_Field_1.getText().length() != 0) {
+                        
+                        String check =  US.login(gui_Text_Field_2.getText(), gui_Text_Field_1.getText());
+                           System.out.println("CHECK TESSTT"+US.login(gui_Text_Field_2.getText(), gui_Text_Field_1.getText()));
+
+                        if (check.equals("1")) {
                             CU.setIdCurrentUser(US.getUser(gui_Text_Field_2.getText()).get(0).getID_Utilisateur());
                             CU.setCurrentUser(US.getUser(gui_Text_Field_2.getText()).get(0));
                             Dialog.show("Authentifié avec succés ! ", "Bienvenue " + CU.getCurrentUser().getPrenom()+ " "+CU.getCurrentUser().getNom() +"!", "Entrer", null);
-                             new InboxForm().show();
+                             new Userpanel().show();
+                        }
+                        else if (check.equals("2")){
+                            CU.setIdCurrentUser(US.getUser(gui_Text_Field_2.getText()).get(0).getID_Utilisateur());
+                            CU.setCurrentUser(US.getUser(gui_Text_Field_2.getText()).get(0));
+                            Dialog.show("Authentifié avec succés ! ", "Bienvenue Admin " + CU.getCurrentUser().getPrenom()+ " "+CU.getCurrentUser().getNom() +"!", "Accéder a votre panel", null);
+                            new Userpanel().show();
+                        }
+                        else{
+                          Dialog.show("Alert", "Veuillez vérifier votre login !", "Vérifier", null);
                         }
                     } else {
                         Dialog.show("Alert", "Password is invalid!", "Ok", null);
@@ -138,16 +150,10 @@ CurrentUser CU = new CurrentUser();
                 } else {
                     Dialog.show("Alert", "E-mail is invalid!", "Ok", null);
                 }
-            } else {
-                Dialog.show("Alert", "Please fill all the fields", "OK", null);
-            }
-    
-               
 
-       
-
+    }
     }
   
     
 
-}
+
