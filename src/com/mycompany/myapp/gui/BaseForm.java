@@ -36,7 +36,8 @@ CurrentUser CU = new CurrentUser();
         
         Image calendarImage = null;
         if(isCurrentCalendar()) calendarImage = selection;
-        
+         Image ProjetImage = null;
+        if(isCurrentProjet()) ProjetImage = selection;
         Image statsImage = null;
         if(isCurrentStats()) statsImage = selection;
         
@@ -63,14 +64,16 @@ CurrentUser CU = new CurrentUser();
         //getToolbar().addCommandToSideMenu("Stats", statsImage, e -> new StatsForm(res).show());
         if (CU.getCurrentUser().getType_user().equals("User")){
         getToolbar().addCommandToSideMenu("Profile", profileImage, e -> new ProfileClientForm(res).show());
-        getToolbar().addCommandToSideMenu("Calendar", calendarImage, e -> new CalendarForm(res).show());
-        getToolbar().addCommandToSideMenu("Map", null, e -> {});
-        getToolbar().addCommandToSideMenu("Trending", trendingImage, e -> new TrendingForm(res).show());
+        
+        getToolbar().addCommandToSideMenu("Collaboration", calendarImage, e -> new CollabForm(res).show());
+        getToolbar().addCommandToSideMenu("Projet", ProjetImage, e -> new ProjetForm(res).show());
+       
+        
         getToolbar().addCommandToSideMenu("Settings", null, e -> {});
         } 
         else if (CU.getCurrentUser().getType_user().equals("Admin")){
         getToolbar().addCommandToSideMenu("Liste utilisateurs", Userslist, e -> new Userslist(res).show());
-        getToolbar().addCommandToSideMenu("Liste collaborations", Collablist, e -> new CalendarForm(res).show());
+      
         getToolbar().addCommandToSideMenu("Settings", null, e -> {});
         }
         // spacer
@@ -96,7 +99,9 @@ CurrentUser CU = new CurrentUser();
     protected boolean isCurrentCalendar() {
         return false;
     }
-    
+     protected boolean isCurrentProjet() {
+        return false;
+    }
     protected boolean isCurrentProfile() {
         return false;
     }
