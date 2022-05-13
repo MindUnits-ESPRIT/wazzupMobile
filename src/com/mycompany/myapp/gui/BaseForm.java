@@ -66,7 +66,7 @@ CurrentUser CU = new CurrentUser();
         getToolbar().addCommandToSideMenu("Ajouter Publication", null, e -> new AddPublicationForm(res,this).show());
         
         getToolbar().addCommandToSideMenu("Evenements", null, e -> {});
-        getToolbar().addCommandToSideMenu("Paiements", null, e -> {});
+        getToolbar().addCommandToSideMenu("Paiements", null, e -> new OffreForm(res).show());
         } 
         else if (CU.getCurrentUser().getType_user().equals("Admin")){
         getToolbar().addCommandToSideMenu("Liste utilisateurs", Userslist, e -> new Userslist(res).show());
