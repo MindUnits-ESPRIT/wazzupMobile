@@ -123,7 +123,7 @@ CurrentUser CU = new CurrentUser();
     public void onButton_2ActionEvent(com.codename1.ui.events.ActionEvent ev) {
         System.out.println(gui_Text_Field_2.getText()+" ....... " +gui_Text_Field_1.getText());
          
-                if (gui_Text_Field_2.getText().length() == 0) {
+                if (gui_Text_Field_2.getText().length() != 0) {
                     if (gui_Text_Field_1.getText().length() != 0) {
                         
                         String check =  US.login(gui_Text_Field_2.getText(), gui_Text_Field_1.getText());
