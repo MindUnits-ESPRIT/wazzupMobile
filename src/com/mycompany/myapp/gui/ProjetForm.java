@@ -47,7 +47,7 @@ CurrentUser CU = new CurrentUser();
 
     
     @Override
-    protected boolean isCurrentInbox() {
+    protected boolean isCurrentProject() {
         return true;
     }
     
