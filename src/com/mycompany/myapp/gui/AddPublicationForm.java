@@ -44,13 +44,16 @@ public class AddPublicationForm  extends BaseForm{
             Container YCont =new Container(BoxLayout.y());
             Container MCont =new Container(BoxLayout.y());
 
-        public AddPublicationForm(com.codename1.ui.util.Resources resourceObjectInstance)
+        public AddPublicationForm(com.codename1.ui.util.Resources resourceObjectInstance,Form previous)
         {
-             initGuiBuilderComponents(resourceObjectInstance);
+             initGuiBuilderComponents(resourceObjectInstance,previous);
         }
-        private void initGuiBuilderComponents(com.codename1.ui.util.Resources resourceObjectInstance) {
+        private void initGuiBuilderComponents(com.codename1.ui.util.Resources resourceObjectInstance,Form previous) {
                    setTitle("Ajouter Publication");
         setName("FormAjouter");
+                this.getToolbar().addCommandToLeftBar("<", null, ev->{
+        previous.showBack();
+        });
         GenerateGUI();
         }
     @Override

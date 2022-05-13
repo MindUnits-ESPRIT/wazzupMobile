@@ -50,7 +50,7 @@ public class CollabForm extends BaseForm {
     public CollabForm(com.codename1.ui.util.Resources resourceObjectInstance) {
         
         initGuiBuilderComponents(resourceObjectInstance);
-        collabs = CS.afficheCollab(59);
+        collabs = CS.afficheCollab(CU.getCurrentUser().getID_Utilisateur());
        
         getToolbar().setTitleComponent(
                 FlowLayout.encloseCenterMiddle(
