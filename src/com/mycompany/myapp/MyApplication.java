@@ -17,6 +17,8 @@ import com.codename1.ui.FontImage;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.FlowLayout;
+import com.mycompany.myapp.gui.CalendarForm;
+import com.mycompany.myapp.gui.EvenementForm;
 import com.mycompany.myapp.gui.ProfileClientForm;
 import com.mycompany.myapp.gui.SignInForm;
 import com.mycompany.myapp.gui.SplashForm;
@@ -48,8 +50,9 @@ public class MyApplication {
             current.show();
             return;
         }
-        new SplashForm(theme).show();
-        //new ProfileClientForm(theme).show();
+      //  new SplashForm(theme).show();
+      // new ProfileClientForm(theme).show();
+        new EvenementForm(theme).show();
     }
 
     public void stop() {
