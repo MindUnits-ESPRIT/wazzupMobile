@@ -30,15 +30,6 @@ CurrentUser CU = new CurrentUser();
         
         Image inboxImage = null;
         if(isCurrentInbox()) inboxImage = selection;
-
-        Image trendingImage = null;
-        if(isCurrentTrending()) trendingImage = selection;
-        
-        Image calendarImage = null;
-        if(isCurrentCalendar()) calendarImage = selection;
-        
-        Image statsImage = null;
-        if(isCurrentStats()) statsImage = selection;
         
         Image profileImage = null;
         if(isCurrentProfile()) profileImage = selection;
@@ -46,21 +37,26 @@ CurrentUser CU = new CurrentUser();
         Image Userslist = null;
         if(isCurrentUserslist()) Userslist = selection;
         
-        Image Collablist = null;
-        if (isCurrentCollablist()) Collablist = selection;
+        Image collabImage = null;
+        if (isCurrentCollablist()) collabImage = selection;
         
+        Image ProjetImage = null;
+        if (isCurrentProject()) ProjetImage = selection;
+
         
-        Button inboxButton = new Button("Inbox", inboxImage);
-        inboxButton.setUIID("SideCommand");
-        inboxButton.getAllStyles().setPaddingBottom(0);
-        Container inbox = FlowLayout.encloseMiddle(inboxButton, 
-                new Label("18", "SideCommandNumber"));
-        inbox.setLeadComponent(inboxButton);
-        inbox.setUIID("SideCommand");
-        inboxButton.addActionListener(e -> new Userpanel().show());
-        getToolbar().addComponentToSideMenu(inbox);
+//        
+////        Button inboxButton = new Button("Inbox", inboxImage);
+////        inboxButton.setUIID("SideCommand");
+////        inboxButton.getAllStyles().setPaddingBottom(0);
+////        Container inbox = FlowLayout.encloseMiddle(inboxButton, 
+////                new Label("18", "SideCommandNumber"));
+////        inbox.setLeadComponent(inboxButton);
+//        inbox.setUIID("SideCommand");
+//        inboxButton.addActionListener(e -> new Userpanel().show());
+//        getToolbar().addComponentToSideMenu(inbox);
         
         //getToolbar().addCommandToSideMenu("Stats", statsImage, e -> new StatsForm(res).show());
+<<<<<<< HEAD
       //  if (CU.getCurrentUser().getType_user().equals("User")){
         getToolbar().addCommandToSideMenu("Profile", profileImage, e -> new ProfileClientForm(res).show());
         getToolbar().addCommandToSideMenu("Calendar", calendarImage, e -> new CalendarForm(res).show());
@@ -70,8 +66,21 @@ CurrentUser CU = new CurrentUser();
         getToolbar().addCommandToSideMenu("Settings", null, e -> {});
    //     } 
      //   else if (CU.getCurrentUser().getType_user().equals("Admin")){
+=======
+        if (CU.getCurrentUser().getType_user().equals("User")){
+        getToolbar().addCommandToSideMenu("Profile", profileImage, e -> new ProfileForm(res).show());
+        
+        getToolbar().addCommandToSideMenu("Collaboration", collabImage, e -> new CollabForm(res).show());
+        getToolbar().addCommandToSideMenu("Projet", ProjetImage, e -> new ProjetForm(res).show());
+       
+        
+        getToolbar().addCommandToSideMenu("Evenements", null, e -> {});
+        getToolbar().addCommandToSideMenu("Paiements", null, e -> {});
+        } 
+        else if (CU.getCurrentUser().getType_user().equals("Admin")){
+>>>>>>> 439a984f4f34c8940ee08926e15984e450e61227
         getToolbar().addCommandToSideMenu("Liste utilisateurs", Userslist, e -> new Userslist(res).show());
-        getToolbar().addCommandToSideMenu("Liste collaborations", Collablist, e -> new CalendarForm(res).show());
+      
         getToolbar().addCommandToSideMenu("Settings", null, e -> {});
     //    }
         // spacer
@@ -97,7 +106,9 @@ CurrentUser CU = new CurrentUser();
     protected boolean isCurrentCalendar() {
         return false;
     }
-    
+     protected boolean isCurrentProjet() {
+        return false;
+    }
     protected boolean isCurrentProfile() {
         return false;
     }
@@ -109,6 +120,9 @@ CurrentUser CU = new CurrentUser();
         return false;
     }
       protected boolean isCurrentCollablist() {
+        return false;
+    }
+      protected boolean isCurrentProject() {
         return false;
     }
       
