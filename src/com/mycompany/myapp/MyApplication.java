@@ -20,6 +20,7 @@ import com.codename1.ui.layouts.FlowLayout;
 import com.mycompany.myapp.gui.ProfileClientForm;
 import com.mycompany.myapp.gui.SignInForm;
 import com.mycompany.myapp.gui.SplashForm;
+import com.mycompany.myapp.gui.TrendingForm;
 
 
 /**
@@ -48,8 +49,9 @@ public class MyApplication {
             current.show();
             return;
         }
-        new SplashForm(theme).show();
+      //  new SplashForm(theme).show();
         //new ProfileClientForm(theme).show();
+        new TrendingForm(theme).show();
     }
 
     public void stop() {

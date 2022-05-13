@@ -61,23 +61,24 @@ CurrentUser CU = new CurrentUser();
         getToolbar().addComponentToSideMenu(inbox);
         
         //getToolbar().addCommandToSideMenu("Stats", statsImage, e -> new StatsForm(res).show());
-        if (CU.getCurrentUser().getType_user().equals("User")){
+      //  if (CU.getCurrentUser().getType_user().equals("User")){
         getToolbar().addCommandToSideMenu("Profile", profileImage, e -> new ProfileClientForm(res).show());
         getToolbar().addCommandToSideMenu("Calendar", calendarImage, e -> new CalendarForm(res).show());
         getToolbar().addCommandToSideMenu("Map", null, e -> {});
         getToolbar().addCommandToSideMenu("Trending", trendingImage, e -> new TrendingForm(res).show());
+        getToolbar().addCommandToSideMenu("Offre Publicitaire", null, e -> new OffreForm(res).show());
         getToolbar().addCommandToSideMenu("Settings", null, e -> {});
-        } 
-        else if (CU.getCurrentUser().getType_user().equals("Admin")){
+   //     } 
+     //   else if (CU.getCurrentUser().getType_user().equals("Admin")){
         getToolbar().addCommandToSideMenu("Liste utilisateurs", Userslist, e -> new Userslist(res).show());
         getToolbar().addCommandToSideMenu("Liste collaborations", Collablist, e -> new CalendarForm(res).show());
         getToolbar().addCommandToSideMenu("Settings", null, e -> {});
-        }
+    //    }
         // spacer
         getToolbar().addComponentToSideMenu(new Label(" ", "SideCommand"));
         getToolbar().addComponentToSideMenu(new Label(res.getImage("logo.png"), "Container"));
-        getToolbar().addComponentToSideMenu(new Label(CU.getCurrentUser().getPrenom()+" "+CU.getCurrentUser().getNom(), "SideCommandNoPad"));
-        getToolbar().addComponentToSideMenu(new Label(CU.getCurrentUser().getType_user(), "SideCommandSmall"));
+     //   getToolbar().addComponentToSideMenu(new Label(CU.getCurrentUser().getPrenom()+" "+CU.getCurrentUser().getNom(), "SideCommandNoPad"));
+       // getToolbar().addComponentToSideMenu(new Label(CU.getCurrentUser().getType_user(), "SideCommandSmall"));
         Button btn = new Button("Deconnexion", "Deconnexionbtn");
         getToolbar().addComponentToSideMenu(btn);
         btn.addActionListener((e) -> new SignInForm().show());

@@ -4,11 +4,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Malek/Documents/PIDev-Mobile-master/src/com/mycompany/myapp/gui/Userpanel.java</file>
-            <file>file:/C:/Users/Malek/Documents/PIDev-Mobile-master/src/com/mycompany/myapp/services/UserService.java</file>
-            <file>file:/C:/Users/Malek/Documents/PIDev-Mobile-master/src/com/mycompany/myapp/gui/SignUpForm.java</file>
-            <file>file:/C:/Users/Malek/Documents/PIDev-Mobile-master/src/com/mycompany/myapp/gui/Userslist.java</file>
-            <file>file:/C:/Users/Malek/Documents/PIDev-Mobile-master/src/com/mycompany/myapp/gui/BaseForm.java</file>
+            <file>file:/C:/Users/Ahmed%20Guedri/OneDrive/Bureau/mobile/wazzupMobile/src/com/mycompany/myapp/MyApplication.java</file>
+            <file>file:/C:/Users/Ahmed%20Guedri/OneDrive/Bureau/mobile/wazzupMobile/src/com/mycompany/myapp/gui/Confirmation.java</file>
+            <file>file:/C:/Users/Ahmed%20Guedri/OneDrive/Bureau/mobile/wazzupMobile/src/com/mycompany/myapp/services/OffreService.java</file>
+            <file>file:/C:/Users/Ahmed%20Guedri/OneDrive/Bureau/mobile/wazzupMobile/src/com/mycompany/myapp/gui/TrendingForm.java</file>
+            <file>file:/C:/Users/Ahmed%20Guedri/OneDrive/Bureau/mobile/wazzupMobile/src/com/mycompany/myapp/entities/User.java</file>
+            <file>file:/C:/Users/Ahmed%20Guedri/OneDrive/Bureau/mobile/wazzupMobile/src/com/mycompany/myapp/gui/SplashForm.java</file>
+            <file>file:/C:/Users/Ahmed%20Guedri/OneDrive/Bureau/mobile/wazzupMobile/src/com/mycompany/myapp/gui/PaiementForm.java</file>
+            <file>file:/C:/Users/Ahmed%20Guedri/OneDrive/Bureau/mobile/wazzupMobile/src/com/mycompany/myapp/gui/OffreForm.java</file>
+            <file>file:/C:/Users/Ahmed%20Guedri/OneDrive/Bureau/mobile/wazzupMobile/src/com/mycompany/myapp/services/PaiementService.java</file>
+            <file>file:/C:/Users/Ahmed%20Guedri/OneDrive/Bureau/mobile/wazzupMobile/src/com/mycompany/myapp/gui/CalendarForm.java</file>
+            <file>file:/C:/Users/Ahmed%20Guedri/OneDrive/Bureau/mobile/wazzupMobile/src/com/mycompany/myapp/gui/BaseForm.java</file>
+            <file>file:/C:/Users/Ahmed%20Guedri/OneDrive/Bureau/mobile/wazzupMobile/src/com/mycompany/myapp/gui/WalkthruForm.java</file>
+            <file>file:/C:/Users/Ahmed%20Guedri/OneDrive/Bureau/mobile/wazzupMobile/src/com/mycompany/myapp/gui/ForgotpasswordForm.java</file>
         </group>
     </open-files>
 </project-private>
