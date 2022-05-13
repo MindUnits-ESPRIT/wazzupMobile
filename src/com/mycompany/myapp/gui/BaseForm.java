@@ -30,7 +30,8 @@ CurrentUser CU = new CurrentUser();
         
         Image inboxImage = null;
         if(isCurrentInbox()) inboxImage = selection;
-        
+        Image trendingImage = null;
+        if(isCurrentInbox()) trendingImage = selection;
         Image profileImage = null;
         if(isCurrentProfile()) profileImage = selection;
         
@@ -61,7 +62,8 @@ CurrentUser CU = new CurrentUser();
         
         getToolbar().addCommandToSideMenu("Collaboration", collabImage, e -> new CollabForm(res).show());
         getToolbar().addCommandToSideMenu("Projet", ProjetImage, e -> new ProjetForm(res).show());
-       
+        getToolbar().addCommandToSideMenu("Actualités", trendingImage, e -> new TrendingForm(res).show());
+        getToolbar().addCommandToSideMenu("Ajouter Publication", null, e -> new AddPublicationForm(res).show());
         
         getToolbar().addCommandToSideMenu("Evenements", null, e -> {});
         getToolbar().addCommandToSideMenu("Paiements", null, e -> {});
