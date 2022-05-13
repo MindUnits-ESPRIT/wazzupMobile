@@ -18,7 +18,7 @@ import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.FlowLayout;
 import com.mycompany.myapp.gui.CollabForm;
-import com.mycompany.myapp.gui.ProfileClientForm;
+import com.mycompany.myapp.gui.ProfileForm;
 import com.mycompany.myapp.gui.ProjetForm;
 import com.mycompany.myapp.gui.SignInForm;
 import com.mycompany.myapp.gui.SplashForm;

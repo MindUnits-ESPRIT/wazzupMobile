@@ -123,7 +123,7 @@ CurrentUser CU = new CurrentUser();
     public void onButton_2ActionEvent(com.codename1.ui.events.ActionEvent ev) {
         System.out.println(gui_Text_Field_2.getText()+" ....... " +gui_Text_Field_1.getText());
          
-                if (gui_Text_Field_2.getText().length() != 0) {
+                if (gui_Text_Field_2.getText().length() == 0) {
                     if (gui_Text_Field_1.getText().length() != 0) {
                         
                         String check =  US.login(gui_Text_Field_2.getText(), gui_Text_Field_1.getText());
@@ -133,13 +133,13 @@ CurrentUser CU = new CurrentUser();
                             CU.setIdCurrentUser(US.getUser(gui_Text_Field_2.getText()).get(0).getID_Utilisateur());
                             CU.setCurrentUser(US.getUser(gui_Text_Field_2.getText()).get(0));
                             Dialog.show("Authentifié avec succés ! ", "Bienvenue " + CU.getCurrentUser().getPrenom()+ " "+CU.getCurrentUser().getNom() +"!", "Entrer", null);
-                             new Userpanel().show();
+                             new ProfileForm().show();
                         }
                         else if (check.equals("2")){
                             CU.setIdCurrentUser(US.getUser(gui_Text_Field_2.getText()).get(0).getID_Utilisateur());
                             CU.setCurrentUser(US.getUser(gui_Text_Field_2.getText()).get(0));
                             Dialog.show("Authentifié avec succés ! ", "Bienvenue Admin " + CU.getCurrentUser().getPrenom()+ " "+CU.getCurrentUser().getNom() +"!", "Accéder a votre panel", null);
-                            new Userpanel().show();
+                            new ProfileForm().show();
                         }
                         else{
                           Dialog.show("Alert", "Veuillez vérifier votre login !", "Vérifier", null);

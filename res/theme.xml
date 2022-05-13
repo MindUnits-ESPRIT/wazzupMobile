@@ -57,8 +57,8 @@
             <entry key="Calendar.Thursday" value="Thu" />
             <entry key="ok" value="OK" />
             <entry key="Calendar.Saturday" value="Sat" />
-            <entry key="select" value="Select" />
             <entry key="Calendar.Friday" value="Fri" />
+            <entry key="select" value="Select" />
             <entry key="edit" value="Edit" />
             <entry key="Calendar.Monday" value="Mon" />
             <entry key="cancel" value="Cancel" />
@@ -209,6 +209,7 @@
         <val key="DarkRect.padUnit" value="2,2,0,2" />
         <val key="DarkRect.padding" value="0,0,5,5" />
         <val key="DarkRect.transparency" value="0" />
+        <val key="Deconnexionbtn.fgColor" value="ff3333" />
         <val key="FloatingActionButton.align" value="4" />
         <val key="FloatingActionButton.bgColor" value="eeb295" />
         <gradient key="FloatingActionButton.bgGradient" color1="16766644" color2="13855849" posX="0.5" posY="0.5" radius="1.0" />
@@ -261,12 +262,12 @@
         <val key="GetStartedRedArrow.sel#transparency" value="0" />
         <val key="GetStartedRedArrow.transparency" value="0" />
         <border key="GroupElement.border" type="image" i1="GroupElement.borderTop_1.png" i2="GroupElement.borderBottom_1.png" i3="GroupElement.borderLeft_1.png" i4="GroupElement.borderRight_1.png" i5="GroupElement.borderTopL_1.png" i6="GroupElement.borderTopR_1.png" i7="GroupElement.borderBottomL_1.png" i8="GroupElement.borderBottomR_1.png" i9="GroupElement.borderCenter_1.png" />
-        <val key="GroupElement.fgColor" value="4d606f" />
+        <val key="GroupElement.fgColor" value="0" />
         <font key="GroupElement.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.0" />
         <val key="GroupElement.marUnit" value="2,2,2,2" />
-        <val key="GroupElement.margin" value="0,0,1,1" />
+        <val key="GroupElement.margin" value="0.0,0.0,1.0,1.0" />
         <val key="GroupElement.padUnit" value="2,2,2,2" />
-        <val key="GroupElement.padding" value="3,3,3,3" />
+        <val key="GroupElement.padding" value="3.0,3.0,3.0,3.0" />
         <val key="GroupElement.transparency" value="0" />
         <border key="GroupElementFirst.border" type="image" i1="GroupElementFirst.borderTop_1.png" i2="GroupElementFirst.borderBottom_1.png" i3="GroupElementFirst.borderLeft_1.png" i4="GroupElementFirst.borderRight_1.png" i5="GroupElementFirst.borderTopL_1.png" i6="GroupElementFirst.borderTopR_1.png" i7="GroupElementFirst.borderBottomL_1.png" i8="GroupElementFirst.borderBottomR_1.png" i9="GroupElementFirst.borderCenter_1.png" />
         <val key="GroupElementFirst.fgColor" value="4d606f" />
@@ -541,9 +542,6 @@
         <val key="StatsLabel.transparency" value="0" />
         <val key="StausBar.transparency" value="0" />
         <val key="Table.bgColor" value="ffffff" />
-        <gradient key="Table.bgGradient" color1="16777215" color2="16777215" posX="0.5" posY="0.5" radius="1.0" />
-        <val key="Table.bgType" value="7" />
-        <val key="Table.fgColor" value="ffffff" />
         <val key="Table.transparency" value="0" />
         <val key="TinyBoldLabel.fgColor" value="3c4f5e" />
         <font key="TinyBoldLabel.font" type="ttf" face="0" style="0" size="0" name="native:MainBold" family="native:MainBold" sizeSettings="3" actualSize="1.5" />

@@ -32,6 +32,8 @@ public class UserService {
   public boolean exists;
   public boolean validedb;
   public boolean recupere;
+  public boolean edited;
+  public boolean pwvalid;
   private ConnectionRequest req;
   private Hashtable requestResult;
   private ArrayList<User> user;
@@ -168,6 +170,45 @@ public class UserService {
     NetworkManager.getInstance().addToQueueAndWait(req);
     return recupere;
   }
+  
+  
+  public boolean EditCompte(String nom,String prenom,String email,String full_number,String genre,String datenaissance) {
+    String url = api.BASE_URL + "/api/users/edit?nom=" + nom + "&prenom=" + prenom+ "&email="+email+"&full_number="+full_number+"&genre="+genre+"&datenaissance="+datenaissance; ; //création de l'URL
+    req.setUrl(url); // Insertion de l'URL de notre demande de connexion
+    req.addResponseListener(
+      new ActionListener<NetworkEvent>() {
+
+        @Override
+        public void actionPerformed(NetworkEvent evt) {
+          resultOK = req.getResponseCode() == 200; //Code HTTP 200 OK
+          edited = Boolean.parseBoolean(new String(req.getResponseData()));
+        }
+      }
+    );
+    NetworkManager.getInstance().addToQueueAndWait(req);
+    return edited;
+  }
+  
+  
+    public boolean CheckCurrentPassword(String email,String mdp) {
+    String url = api.BASE_URL + "/api/users/edit/passwordcheck?email=" + email + "&mdp=" + mdp ; //création de l'URL
+    req.setUrl(url); // Insertion de l'URL de notre demande de connexion
+    req.addResponseListener(
+      new ActionListener<NetworkEvent>() {
+
+        @Override
+        public void actionPerformed(NetworkEvent evt) {
+          resultOK = req.getResponseCode() == 200; //Code HTTP 200 OK
+          pwvalid = Boolean.parseBoolean(new String(req.getResponseData()));
+        }
+      }
+    );
+    NetworkManager.getInstance().addToQueueAndWait(req);
+    return pwvalid;
+  }
+  
+  
+  
 
   public String login(String email, String password) {
     String url =

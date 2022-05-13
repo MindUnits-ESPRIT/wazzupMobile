@@ -43,7 +43,7 @@ public class CollabForm extends BaseForm {
 
     
     @Override
-    protected boolean isCurrentInbox() {
+    protected boolean isCurrentCollablist() {
         return true;
     }
     
