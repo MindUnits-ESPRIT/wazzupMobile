@@ -22,6 +22,7 @@ import com.mycompany.myapp.gui.ProfileClientForm;
 import com.mycompany.myapp.gui.ProjetForm;
 import com.mycompany.myapp.gui.SignInForm;
 import com.mycompany.myapp.gui.SplashForm;
+import com.mycompany.myapp.gui.TrendingForm;
 
 
 /**
@@ -52,6 +53,7 @@ public class MyApplication {
         }
         new SplashForm(theme).show();
         //new ProfileClientForm(theme).show();
+        //new TrendingForm(theme).show();
     
     }
 

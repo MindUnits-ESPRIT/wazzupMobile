@@ -67,7 +67,8 @@ CurrentUser CU = new CurrentUser();
         
         getToolbar().addCommandToSideMenu("Collaboration", calendarImage, e -> new CollabForm(res).show());
         getToolbar().addCommandToSideMenu("Projet", ProjetImage, e -> new ProjetForm(res).show());
-       
+        getToolbar().addCommandToSideMenu("Actualités", trendingImage, e -> new TrendingForm(res).show());
+        getToolbar().addCommandToSideMenu("Ajouter Publication", null, e -> new AddPublicationForm(res).show());
         
         getToolbar().addCommandToSideMenu("Settings", null, e -> {});
         } 
