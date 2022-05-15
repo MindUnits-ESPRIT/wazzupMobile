@@ -197,8 +197,11 @@ CurrentUser CU = new CurrentUser();
         ComboBox<String> cb = new ComboBox<>();
         cb.setName(JOI.get("idPublication").toString());
         cb.addItem("");
-        cb.addItem("Modifier cette publication");
+        if (CU.getIdCurrentUser()==Integer.parseInt(USEROBject.get("idUtilisateur").toString()))
+        {cb.addItem("Modifier cette publication");
         cb.addItem("Supprimer cette publication");
+        }
+        cb.addItem("Signaler cette publication");
         cb.addItem("Sponsoriser cette publication");
       //  Label lbimg = new Label(theme.getImage(us.getNomimg()));
         cnt0.add(cb); //ADD FUNCTION BUTTON

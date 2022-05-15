@@ -8,12 +8,14 @@ package com.mycompany.myapp.gui;
 import com.codename1.ui.Button;
 import com.codename1.ui.ComboBox;
 import com.codename1.ui.Container;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextField;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.util.Resources;
 import com.mycompany.myapp.services.PaiementService;
+import static java.lang.Integer.parseInt;
 
 /**
  *
@@ -38,6 +40,9 @@ Container MC=new Container(BoxLayout.yCenter());
         cb.addItem("Carte Credit");
         Label lb2=new Label("Prix");
         TextField F2=new TextField();
+        
+        
+
         //F2.setConstraint();
 
         Button btnS=new Button("Payer");
@@ -46,9 +51,14 @@ Container MC=new Container(BoxLayout.yCenter());
         btnS.addActionListener(e->{
          //CODE EL SERVICE
             System.out.println("GG ADDED");
+            if(Integer.parseInt(F2.getText().toString())>0 && Integer.parseInt(F2.getText().toString())<10000)
+            {
             PaiementService AS=new PaiementService();
             int id=AS.Ajouter(s2, Integer.parseInt(F2.getText()), cb.getSelectedItem(), qte);
             new Confirmation(theme, id).show();
+            }
+            else
+                  Dialog.show("Status","Prix vide !","ok",null);
         });
     }
 }

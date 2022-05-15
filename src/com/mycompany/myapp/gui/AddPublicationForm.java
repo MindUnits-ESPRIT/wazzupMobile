@@ -101,8 +101,14 @@ public class AddPublicationForm  extends BaseForm{
     saveB.addActionListener(e -> {
         System.out.println("PublicationAjouté");
         String desc=Text_Area_1.getText();
+        if (desc.length()==0)
+        {   Dialog.show("Alert", "Veuillez Tapez quelque chose!", "Ok", null);
+        
+        }
+        else{
         String img="NULL";
         UpdateData(desc,img);
+        }
         });
     add(cnt);
     

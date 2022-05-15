@@ -129,14 +129,26 @@ class EventCallbackClass implements com.codename1.ui.events.ActionListener, com.
         }
     }
  public void onButton_2ActionEvent(com.codename1.ui.events.ActionEvent ev) {
+     int f = 0;
         System.out.println(txtfild.getText()+" ....... ") ;
          if ((txtfild.getText().length() != 0)) { 
-             CS.ajouterCollab(txtfild.getText(), CU.getIdCurrentUser());
+          for (Salle_Collaboration collab : collabs) {
+              if(collab.getNom_Collab().equals(txtfild.getText())){
+              f=1;
+                        Dialog.show("Alert", " Nom existe déja ! ", "Ok", null);
+
+   
+              }
+          // Here your room is available
+}
+          if (f==0){
+            CS.ajouterCollab(txtfild.getText(), CU.getIdCurrentUser());
              
              collabs=CS.afficheCollab(59); 
                Dialog.show("Done ! ", "Collab "+txtfild.getText()+" créer" , "Entrer", null); 
                 new CollabForm().show();
-   
+          }
+            
 
                
                         }  else  {
