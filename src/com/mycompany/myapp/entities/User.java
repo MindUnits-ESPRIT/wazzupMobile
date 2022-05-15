@@ -37,7 +37,17 @@ public class User{
         this.type_user = type_user;
         this.genre = genre;
     }
-
+    
+      public User(int ID_Utilisateur,String nom, String prenom, String datenaissance, String num_tel, String email, String type_user, String genre) {
+        this.ID_Utilisateur = ID_Utilisateur;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.datenaissance = datenaissance;
+        this.num_tel = num_tel;
+        this.email = email;
+        this.type_user = type_user;
+        this.genre = genre;
+    }
     public User() {
     }
 

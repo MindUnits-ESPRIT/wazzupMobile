@@ -20,7 +20,7 @@ import com.mycompany.myapp.services.UserService;
 
 /**
  *
- * @author SBS
+ * @author MINDUNITS
  */
 public class BaseForm extends Form {
 UserService US = new UserService();
@@ -30,54 +30,54 @@ CurrentUser CU = new CurrentUser();
         
         Image inboxImage = null;
         if(isCurrentInbox()) inboxImage = selection;
-
         Image trendingImage = null;
-        if(isCurrentTrending()) trendingImage = selection;
-        
-        Image calendarImage = null;
-        if(isCurrentCalendar()) calendarImage = selection;
-        
-        Image statsImage = null;
-        if(isCurrentStats()) statsImage = selection;
-        
+        if(isCurrentInbox()) trendingImage = selection;
         Image profileImage = null;
         if(isCurrentProfile()) profileImage = selection;
         
         Image Userslist = null;
         if(isCurrentUserslist()) Userslist = selection;
         
-        Image Collablist = null;
-        if (isCurrentCollablist()) Collablist = selection;
+        Image collabImage = null;
+        if (isCurrentCollablist()) collabImage = selection;
         
+        Image ProjetImage = null;
+        if (isCurrentProject()) ProjetImage = selection;
+
         
-        Button inboxButton = new Button("Inbox", inboxImage);
-        inboxButton.setUIID("SideCommand");
-        inboxButton.getAllStyles().setPaddingBottom(0);
-        Container inbox = FlowLayout.encloseMiddle(inboxButton, 
-                new Label("18", "SideCommandNumber"));
-        inbox.setLeadComponent(inboxButton);
-        inbox.setUIID("SideCommand");
-        inboxButton.addActionListener(e -> new Userpanel().show());
-        getToolbar().addComponentToSideMenu(inbox);
+//        
+////        Button inboxButton = new Button("Inbox", inboxImage);
+////        inboxButton.setUIID("SideCommand");
+////        inboxButton.getAllStyles().setPaddingBottom(0);
+////        Container inbox = FlowLayout.encloseMiddle(inboxButton, 
+////                new Label("18", "SideCommandNumber"));
+////        inbox.setLeadComponent(inboxButton);
+//        inbox.setUIID("SideCommand");
+//        inboxButton.addActionListener(e -> new Userpanel().show());
+//        getToolbar().addComponentToSideMenu(inbox);
         
         //getToolbar().addCommandToSideMenu("Stats", statsImage, e -> new StatsForm(res).show());
-       // if (CU.getCurrentUser().getType_user().equals("User")){
-        getToolbar().addCommandToSideMenu("Profile", profileImage, e -> new ProfileClientForm(res).show());
-        getToolbar().addCommandToSideMenu("Calendar", calendarImage, e -> new CalendarForm(res).show());
-        getToolbar().addCommandToSideMenu("Evenement", null, e -> new EvenementForm(res).show());
-        getToolbar().addCommandToSideMenu("Trending", trendingImage, e -> new TrendingForm(res).show());
-        getToolbar().addCommandToSideMenu("Settings", null, e -> {});
-       // } 
-       // else if (CU.getCurrentUser().getType_user().equals("Admin")){
+        if (CU.getCurrentUser().getType_user().equals("User")){
+        getToolbar().addCommandToSideMenu("Profile", profileImage, e -> new ProfileForm(res).show());
+        
+        getToolbar().addCommandToSideMenu("Collaboration", collabImage, e -> new CollabForm(res).show());
+        getToolbar().addCommandToSideMenu("Projet", ProjetImage, e -> new ProjetForm(res).show());
+        getToolbar().addCommandToSideMenu("Actualités", trendingImage, e -> new TrendingForm(res).show());
+        getToolbar().addCommandToSideMenu("Ajouter Publication", null, e -> new AddPublicationForm(res).show());
+        
+        getToolbar().addCommandToSideMenu("Evenements", null, e -> new EvenementForm(res).show());
+        getToolbar().addCommandToSideMenu("Paiements", null, e -> new OffreForm(res).show());
+        } 
+        else if (CU.getCurrentUser().getType_user().equals("Admin")){
         getToolbar().addCommandToSideMenu("Liste utilisateurs", Userslist, e -> new Userslist(res).show());
-        getToolbar().addCommandToSideMenu("Liste collaborations", Collablist, e -> new CalendarForm(res).show());
+      
         getToolbar().addCommandToSideMenu("Settings", null, e -> {});
-        //}
+        }
         // spacer
         getToolbar().addComponentToSideMenu(new Label(" ", "SideCommand"));
         getToolbar().addComponentToSideMenu(new Label(res.getImage("logo.png"), "Container"));
-//        getToolbar().addComponentToSideMenu(new Label(CU.getCurrentUser().getPrenom()+" "+CU.getCurrentUser().getNom(), "SideCommandNoPad"));
-      //  getToolbar().addComponentToSideMenu(new Label(CU.getCurrentUser().getType_user(), "SideCommandSmall"));
+        getToolbar().addComponentToSideMenu(new Label(CU.getCurrentUser().getPrenom()+" "+CU.getCurrentUser().getNom(), "SideCommandNoPad"));
+        getToolbar().addComponentToSideMenu(new Label(CU.getCurrentUser().getType_user(), "SideCommandSmall"));
         Button btn = new Button("Deconnexion", "Deconnexionbtn");
         getToolbar().addComponentToSideMenu(btn);
         btn.addActionListener((e) -> new SignInForm().show());
@@ -96,7 +96,9 @@ CurrentUser CU = new CurrentUser();
     protected boolean isCurrentCalendar() {
         return false;
     }
-    
+     protected boolean isCurrentProjet() {
+        return false;
+    }
     protected boolean isCurrentProfile() {
         return false;
     }
@@ -108,6 +110,9 @@ CurrentUser CU = new CurrentUser();
         return false;
     }
       protected boolean isCurrentCollablist() {
+        return false;
+    }
+      protected boolean isCurrentProject() {
         return false;
     }
       

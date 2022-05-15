@@ -132,6 +132,17 @@ public class SignUpForm extends com.codename1.ui.Form {
     
     public void onButton_2ActionEvent(com.codename1.ui.events.ActionEvent ev) {
         System.out.println(gui_Text_Field_2.getText()+" ....... " +gui_Text_Field_1.getText()+" ....... " + gui_Text_Field_3.getText()+" ....... " +gui_comboBox.getSelectedItem());
+        if (gui_Text_Field_1.getText().length() == 0){
+            Dialog.show("Error","Veuillez insérer un nom ",new Command("Vérifier"));
+        }
+        else if (gui_Text_Field_2.getText().length() == 0){
+            Dialog.show("Error","Veuillez insérer un prenom",new Command("Vérifier"));
+        }else if (gui_Text_Field_3.getText().length() == 0){
+            Dialog.show("Error","Veuillez insérer un email",new Command("Vérifier"));
+        }else if (gui_Text_Field_4.getText().length() == 0){
+            Dialog.show("Error","Veuillez insérer un numero de téléphone ",new Command("Vérifier"));
+        }else{
+
         boolean exists=UserService.getInstance().CheckMailExistance(gui_Text_Field_3.getText());
         boolean dbvalide=UserService.getInstance().CheckDateofbirthvalidity(datePicker.getText());
        System.out.println("DB CHECK"+dbvalide);
@@ -140,7 +151,7 @@ public class SignUpForm extends com.codename1.ui.Form {
              boolean added=UserService.getInstance().addUser(gui_Text_Field_1.getText(), gui_Text_Field_2.getText(), gui_Text_Field_3.getText(),gui_Text_Field_5.getText(),gui_comboBox.getSelectedItem(),gui_Text_Field_4.getText(),datePicker.getText());
             if (added){
           Dialog.show("Success","Inscription acceptée",new Command("OK"));
-
+          new SignInForm().show();
            }
           } else {
             Dialog.show("Error","Inscription Réfusée , Il faut que vous soyez +18 ans ",new Command("Vérifier"));
@@ -149,7 +160,7 @@ public class SignUpForm extends com.codename1.ui.Form {
          Dialog.show("Error","Inscription Réfusée , Votre email existe déja ",new Command("Vérifier"));
 
         }
-        
+        }
     }
 
 }

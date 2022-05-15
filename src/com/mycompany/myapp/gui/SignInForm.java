@@ -78,7 +78,7 @@ CurrentUser CU = new CurrentUser();
             }
             
             if(sourceComponent == gui_Button_3) {
-                System.out.println("forget pass");
+                new ForgotpasswordForm().show();
             }
         }
 
@@ -133,13 +133,13 @@ CurrentUser CU = new CurrentUser();
                             CU.setIdCurrentUser(US.getUser(gui_Text_Field_2.getText()).get(0).getID_Utilisateur());
                             CU.setCurrentUser(US.getUser(gui_Text_Field_2.getText()).get(0));
                             Dialog.show("Authentifié avec succés ! ", "Bienvenue " + CU.getCurrentUser().getPrenom()+ " "+CU.getCurrentUser().getNom() +"!", "Entrer", null);
-                             new Userpanel().show();
+                             new ProfileForm().show();
                         }
                         else if (check.equals("2")){
                             CU.setIdCurrentUser(US.getUser(gui_Text_Field_2.getText()).get(0).getID_Utilisateur());
                             CU.setCurrentUser(US.getUser(gui_Text_Field_2.getText()).get(0));
                             Dialog.show("Authentifié avec succés ! ", "Bienvenue Admin " + CU.getCurrentUser().getPrenom()+ " "+CU.getCurrentUser().getNom() +"!", "Accéder a votre panel", null);
-                            new Userpanel().show();
+                            new ProfileForm().show();
                         }
                         else{
                           Dialog.show("Alert", "Veuillez vérifier votre login !", "Vérifier", null);
@@ -150,14 +150,10 @@ CurrentUser CU = new CurrentUser();
                 } else {
                     Dialog.show("Alert", "E-mail is invalid!", "Ok", null);
                 }
-            
-    
-               
 
-       
-
+    }
     }
   
     
 
-}
+

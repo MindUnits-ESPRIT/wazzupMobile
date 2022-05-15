@@ -68,6 +68,7 @@
     <image name="label_round.png" type="multi"  />
     <image name="learn-codename-one.jpg"  />
     <image name="logo.png"  />
+    <image name="No_image_available.png"  />
     <image name="profile_image.png" type="multi"  />
     <image name="progress.png" type="multi"  />
     <image name="selection-in-sidemenu.png" type="multi"  />
@@ -76,7 +77,7 @@
     <theme name="Theme">
         <val key="@ComponentGroupBool" value="true" />
         <val key="@includeNativeBool" value="true" />
-        <gradient key="Button.bgGradient" color1="16750899" color2="16763904" posX="0.5" posY="0.5" radius="1.0" />
+        <gradient key="Button.bgGradient" color1="13324878" color2="15570254" posX="0.5" posY="0.5" radius="1.0" />
         <val key="Button.bgType" value="7" />
         <border key="Button.border" type="empty" />
         <val key="Button.fgColor" value="ffffff" />
@@ -85,15 +86,15 @@
         <val key="Button.margin" value="1.0,1.0,1.0,1.0" />
         <val key="Button.padUnit" value="2,2,2,2" />
         <val key="Button.padding" value="4.0,4.0,4.0,4.0" />
-        <gradient key="Button.press#bgGradient" color1="13324878" color2="15570254" posX="0.5" posY="0.5" radius="1.0" />
+        <gradient key="Button.press#bgGradient" color1="10231322" color2="15570254" posX="0.5" posY="0.5" radius="1.0" />
         <val key="Button.press#bgType" value="7" />
         <border key="Button.press#border" type="empty" />
         <val key="Button.press#fgColor" value="ffffff" />
         <font key="Button.press#font" type="ttf" face="0" style="0" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="3.0" />
         <val key="Button.press#marUnit" value="2,2,2,2" />
-        <val key="Button.press#margin" value="1,1,1,1" />
+        <val key="Button.press#margin" value="1.0,1.0,1.0,1.0" />
         <val key="Button.press#padUnit" value="2,2,2,2" />
-        <val key="Button.press#padding" value="4,4,4,4" />
+        <val key="Button.press#padding" value="4.0,4.0,4.0,4.0" />
         <gradient key="Button.sel#bgGradient" color1="10085441" color2="15975582" posX="0.5" posY="0.5" radius="1.0" />
         <val key="Button.sel#bgType" value="7" />
         <border key="Button.sel#border" type="empty" />
@@ -208,6 +209,7 @@
         <val key="DarkRect.padUnit" value="2,2,0,2" />
         <val key="DarkRect.padding" value="0,0,5,5" />
         <val key="DarkRect.transparency" value="0" />
+        <val key="Deconnexionbtn.fgColor" value="ff3333" />
         <val key="FloatingActionButton.align" value="4" />
         <val key="FloatingActionButton.bgColor" value="eeb295" />
         <gradient key="FloatingActionButton.bgGradient" color1="16766644" color2="13855849" posX="0.5" posY="0.5" radius="1.0" />
@@ -260,30 +262,28 @@
         <val key="GetStartedRedArrow.sel#transparency" value="0" />
         <val key="GetStartedRedArrow.transparency" value="0" />
         <border key="GroupElement.border" type="image" i1="GroupElement.borderTop_1.png" i2="GroupElement.borderBottom_1.png" i3="GroupElement.borderLeft_1.png" i4="GroupElement.borderRight_1.png" i5="GroupElement.borderTopL_1.png" i6="GroupElement.borderTopR_1.png" i7="GroupElement.borderBottomL_1.png" i8="GroupElement.borderBottomR_1.png" i9="GroupElement.borderCenter_1.png" />
-        <val key="GroupElement.fgColor" value="4d606f" />
+        <val key="GroupElement.fgColor" value="0" />
         <font key="GroupElement.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.0" />
         <val key="GroupElement.marUnit" value="2,2,2,2" />
-        <val key="GroupElement.margin" value="0,0,1,1" />
+        <val key="GroupElement.margin" value="0.0,0.0,1.0,1.0" />
         <val key="GroupElement.padUnit" value="2,2,2,2" />
-        <val key="GroupElement.padding" value="3,3,3,3" />
+        <val key="GroupElement.padding" value="3.0,3.0,3.0,3.0" />
         <val key="GroupElement.transparency" value="0" />
-        <val key="GroupElementFirst.bgColor" value="000000" />
         <border key="GroupElementFirst.border" type="image" i1="GroupElementFirst.borderTop_1.png" i2="GroupElementFirst.borderBottom_1.png" i3="GroupElementFirst.borderLeft_1.png" i4="GroupElementFirst.borderRight_1.png" i5="GroupElementFirst.borderTopL_1.png" i6="GroupElementFirst.borderTopR_1.png" i7="GroupElementFirst.borderBottomL_1.png" i8="GroupElementFirst.borderBottomR_1.png" i9="GroupElementFirst.borderCenter_1.png" />
         <val key="GroupElementFirst.fgColor" value="4d606f" />
         <font key="GroupElementFirst.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.0" />
         <val key="GroupElementFirst.marUnit" value="2,2,2,2" />
-        <val key="GroupElementFirst.margin" value="1.0,0.0,1.0,1.0" />
+        <val key="GroupElementFirst.margin" value="1,0,1,1" />
         <val key="GroupElementFirst.padUnit" value="2,2,2,2" />
-        <val key="GroupElementFirst.padding" value="3.0,3.0,3.0,3.0" />
+        <val key="GroupElementFirst.padding" value="3,3,3,3" />
         <val key="GroupElementFirst.transparency" value="0" />
         <border key="GroupElementLast.border" type="image" i1="GroupElementLast.borderTop_1.png" i2="GroupElementLast.borderBottom_1.png" i3="GroupElementLast.borderLeft_1.png" i4="GroupElementLast.borderRight_1.png" i5="GroupElementLast.borderTopL_1.png" i6="GroupElementLast.borderTopR_1.png" i7="GroupElementLast.borderBottomL_1.png" i8="GroupElementLast.borderBottomR_1.png" i9="GroupElementLast.borderCenter_1.png" />
         <val key="GroupElementLast.fgColor" value="4d606f" />
         <font key="GroupElementLast.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.0" />
         <val key="GroupElementLast.marUnit" value="2,2,2,2" />
-        <val key="GroupElementLast.margin" value="0.0,1.0,1.0,1.0" />
+        <val key="GroupElementLast.margin" value="0,1,1,1" />
         <val key="GroupElementLast.padUnit" value="2,2,2,2" />
-        <val key="GroupElementLast.padding" value="3.0,3.0,3.0,3.0" />
-        <val key="GroupElementLast.sel#bgColor" value="ffffff" />
+        <val key="GroupElementLast.padding" value="3,3,3,3" />
         <val key="GroupElementLast.transparency" value="0" />
         <border key="GroupElementOnly.border" type="image" i1="GroupElementOnly.borderTop_1.png" i2="GroupElementOnly.borderBottom_1.png" i3="GroupElementOnly.borderLeft_1.png" i4="GroupElementOnly.borderRight_1.png" i5="GroupElementOnly.borderTopL_1.png" i6="GroupElementOnly.borderTopR_1.png" i7="GroupElementOnly.borderBottomL_1.png" i8="GroupElementOnly.borderBottomR_1.png" i9="GroupElementOnly.borderCenter_1.png" />
         <val key="GroupElementOnly.fgColor" value="4d606f" />
@@ -440,12 +440,12 @@
         <val key="SideCommandSmall.fgColor" value="bdcadb" />
         <font key="SideCommandSmall.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="2.5" />
         <val key="SideCommandSmall.padUnit" value="0,0,2,0" />
-        <val key="SideCommandSmall.padding" value="0.0,4.0,0.0,0.0" />
+        <val key="SideCommandSmall.padding" value="0,4,0,0" />
         <val key="SideCommandSmall.textDecoration" value="0" />
-        <val key="SideNavigationPanel.bgImage" value="background.jpg" />
+        <val key="SideNavigationPanel.bgImage" value="sidemenu-background.jpg" />
         <val key="SideNavigationPanel.bgType" value="33" />
         <val key="SideNavigationPanel.padUnit" value="2,2,0,0" />
-        <val key="SideNavigationPanel.padding" value="16.0,0.0,5.0,0.0" />
+        <val key="SideNavigationPanel.padding" value="16,0,5,0" />
         <val key="SignInForm.bgColor" value="ffffff" />
         <val key="SignInForm.bgImage" value="background.jpg" />
         <val key="SignInForm.bgType" value="1" />
@@ -541,6 +541,8 @@
         <val key="StatsLabel.padding" value="1,1,1,1" />
         <val key="StatsLabel.transparency" value="0" />
         <val key="StausBar.transparency" value="0" />
+        <val key="Table.bgColor" value="ffffff" />
+        <val key="Table.transparency" value="0" />
         <val key="TinyBoldLabel.fgColor" value="3c4f5e" />
         <font key="TinyBoldLabel.font" type="ttf" face="0" style="0" size="0" name="native:MainBold" family="native:MainBold" sizeSettings="3" actualSize="1.5" />
         <val key="TinyBoldLabel.margin" value="0,0,0,0" />
